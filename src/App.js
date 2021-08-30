@@ -8,16 +8,16 @@ function App() {
     {
       id: 1,
       name: 'Jay',
-      userName: 'Floppydisk'
+      username: 'Floppydisk'
     }, {
       id: 2,
       name: 'Craig',
-      userName: 'SiliconIdol'
+      username: 'SiliconIdol'
     },
     {
       id: 3,
       name: 'Ben',
-      userName: 'Benisphere'
+      username: 'Benisphere'
     }
   ]
 

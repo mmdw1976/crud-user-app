@@ -11,18 +11,24 @@ const UserTable = (props) => {
                 </tr>
             </thead>
             <tbody>
-                {props.users.map(user => {
-                    return (
-                        <tr key={user.id}>
-                            <td>{user.name}</td>
-                            <td>{user.username}</td>
-                            <td>
-                                <button>Edit</button>
-                                <button>Delete</button>
-                            </td>
-                        </tr>
-                    )
-                })}
+                {props.users.length > 0 ? (
+                    props.users.map(user => {
+                        return (
+                            <tr key={user.id}>
+                                <td>{user.name}</td>
+                                <td>{user.username}</td>
+                                <td>
+                                    <button>Edit</button>
+                                    <button>Delete</button>
+                                </td>
+                            </tr>
+                        )
+                    })
+                ) : (
+                    <tr>
+                        <td colSpan={3}>No Users</td>
+                    </tr>
+                )}
             </tbody>
         </table>
     )
