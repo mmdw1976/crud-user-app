@@ -15,9 +15,14 @@ h1 {
   width: 100%
 }
 
+h2 {
+  padding: 0;
+}
+
 .flex-row {
   display: flex;
   flex: 1;
+  align-items: flex-start;
 }
 
 .flex-large {
@@ -27,12 +32,31 @@ h1 {
   padding: 1rem;
 }
 
-.flex-large table {
+.flex-large table, .flex-large form {
   width: 100%;
-  text-align: center;
   border: 1px solid #eee;
   padding: 1rem;
 }
+
+.flex-large table {
+  text-align: center;
+}
+
+.flex-large form {
+  height: 150px;
+  background-color: #eee;
+  margin-top: 0;
+}
+
+.flex-large form {
+  display: flex;
+}
+
+form div {
+  flex: 1
+}
+
+
 
 .flex-large table button {
   margin: 0 .4rem;

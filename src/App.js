@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import UserForm from './components/tables/UserForm';
 
 import UserTable from './components/tables/UserTable';
 
@@ -29,6 +30,7 @@ function App() {
       <div className="flex-row">
         <div className="flex-large">
           <h2>Add User</h2>
+          <UserForm />
         </div>
         <div className="flex-large">
           <h2>View Users</h2>
