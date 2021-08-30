@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UserTable = () => {
+const UserTable = (props) => {
     return (
         <table>
             <thead className="table-head">
@@ -11,14 +11,18 @@ const UserTable = () => {
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Name Data</td>
-                    <td>Username data</td>
-                    <td>
-                        <button>Edit</button>
-                        <button>Delete</button>
-                    </td>
-                </tr>
+                {props.users.map(user => {
+                    return (
+                        <tr key={user.id}>
+                            <td>{user.name}</td>
+                            <td>{user.username}</td>
+                            <td>
+                                <button>Edit</button>
+                                <button>Delete</button>
+                            </td>
+                        </tr>
+                    )
+                })}
             </tbody>
         </table>
     )
