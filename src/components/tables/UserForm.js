@@ -14,9 +14,13 @@ const UserForm = (props) => {
     }
 
     const submitHandler = (e) => {
-        console.log('from form');
-        console.log(user)
         e.preventDefault();
+
+        // check if input fields are empty if so do nothing!
+        if(!user.name || !user.username) {
+            return;
+        }
+
         props.addUser(user);
     }
     return ( 
@@ -31,8 +35,7 @@ const UserForm = (props) => {
                 <br />
                 <input type="text" name="username" id="username" value={user.username} onChange={handleInputChange} />
             </div>
-            <br />
-            <div>
+            <div className="button-container">
                 <button>submit</button>
             </div>
         </form>

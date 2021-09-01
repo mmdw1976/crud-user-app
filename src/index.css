@@ -50,10 +50,16 @@ h2 {
 
 .flex-large form {
   display: flex;
+  flex-wrap: wrap;
 }
 
 form div {
-  flex: 1
+  width: 50%;
+}
+
+form input {
+  width: 90%;
+
 }
 
 
@@ -69,5 +75,17 @@ form div {
 
 tbody td {
   padding: .5rem 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.button-container button {
+  height: 2rem;
+  width: 4rem;
 }
 
