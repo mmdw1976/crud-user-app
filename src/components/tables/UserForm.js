@@ -22,6 +22,8 @@ const UserForm = (props) => {
         }
 
         props.addUser(user);
+
+        setUser(initialFormState);
     }
     return ( 
         <form onSubmit={submitHandler}>
