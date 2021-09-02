@@ -45,17 +45,23 @@ h2 {
 }
 
 .flex-large form {
-  height: 150px;
+  min-height: 150px;
   background-color: #eee;
   margin-top: 0;
-}
-
-.flex-large form {
   display: flex;
+  flex-wrap: wrap;
 }
 
 form div {
-  flex: 1
+  width: 100%;
+}
+
+form input {
+  width: 100%;
+  height: 2rem;
+  margin: 1rem 0;
+  font-size: 1rem;
+  padding: .5rem;
 }
 
 
@@ -71,5 +77,17 @@ form div {
 
 tbody td {
   padding: .5rem 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.button-container button {
+  height: 2rem;
+  width: 4rem;
 }
 
